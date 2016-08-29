@@ -1,0 +1,17 @@
+{
+  "name": "com.paulon.quicknative",
+  "description": "Native components for QML",
+  "author": {
+    "name": "Paulo Nogueira",
+    "email": "paulondc@gmail.com"
+  },
+  "repository": {
+    "type": "GITHUB",
+    "url": "https://github.com/paulondc/quicknative.git"
+  },
+  "version": {
+    "label": "0.1.0"
+  },
+  "pri_filename": "quicknative.pri",
+  "license": "MIT"
+}

@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/QuickNative">
+        <file>qmldir</file>
+        <file>qml/nativefiledialog.qml</file>
+    </qresource>
+</RCC>
