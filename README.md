@@ -1,14 +1,50 @@
 <img src="data/logo.png"/>
 
-The goal of quick native is to provide native user experience in components that require a fine integration in both Android and IOS. Also, this library is inspired by how [RectNative](http://www.reactnative.com) extensions work which briefly means it provides an interface that is platform independent.
+The goal of quick native is to provide native user experience in components that require a fine integration in both Android and IOS. Also, this library is inspired by how [RectNative](http://www.reactnative.com) extensions work which briefly means it provides an abstracted interface that's platform independent.
 
-One the main reasons to use QML/Qt is the fact that apps don't not need to run in their target platform all the time (through emulators or physical devices) instead, they can be executed locally which makes the process of writing mobile apps very convenient, therefore this library fallbacks to Qt's standard components when the running platform does not have a native one.
+One of the main reasons to use QML/Qt is the fact that apps don't need to run in their target platform all the time (through emulators or physical devices), instead they can be executed locally which makes the process of writing mobile apps very convenient, therefore components in this library fallback to Qt's standard ones when the running platform does not have an equivalent native one.
 
 ### Native Components
-Component | Native Android | Native IOS |
---- | --- | ---
-FileDialog | Done | Supported by default
-TextInput | *upcoming* | *upcoming*
+Component | Native Android | Native IOS | Desktop |
+--- | --- | --- | --- |
+FileDialog | Provided By QuickNative | Native component provided by Qt | Provided By Qt |
+TextInput | *coming soon* | *coming soon* | Provided By Qt |
+
+### Examples
+
+
+#### Image Picker (Same API as [FileDialog](http://doc.qt.io/qt-5/qml-qtquick-dialogs-filedialog.html)):
+
+```javascript
+
+import QuickNative 0.1
+
+...
+
+NativeFileDialog {
+    selectMultiple: true
+    folder: shortcuts.pictures
+
+    Component.onCompleted: {
+        open()
+    }
+
+    onFileUrlsChanged: {
+        console.log(fileUrls)
+    }
+}
+
+...
+
+```
+
+#### Result:
+
+Android | IOS | Desktop
+--- | --- | --- |
+<img src="data/AndroidImagePicker.jpg" width="100"/> | <img src="data/IOSImagePicker.jpg" width="100"/> | <img src="data/DesktopPicker.png" width="150"/>
+
+
 
 ### Installation
 
