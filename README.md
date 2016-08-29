@@ -48,7 +48,7 @@ Android | IOS | Desktop
 
 ### Installation
 
-This library is available through [npm](https://www.qpm.io):
+This library is available through [qpm](https://www.qpm.io):
 
     npm install -g com.paulon.quicknative
 
