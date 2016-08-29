@@ -8,7 +8,7 @@ One of the main reasons to use QML/Qt is the fact that apps don't need to run in
 Component | Native Android | Native IOS | Desktop |
 --- | --- | --- | --- |
 NativeFileDialog | Provided By QuickNative | Native component provided by Qt | Provided By Qt |
-NativeTextInput | *coming soon* | *coming soon* | Provided By Qt |
+NativeTextInput | *coming soon* | *coming soon* | *coming soon* |
 
 ### Examples
 
