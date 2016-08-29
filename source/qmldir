@@ -1,0 +1,2 @@
+module QuickNative
+NativeFileDialog 0.1 qml/nativefiledialog.qml
