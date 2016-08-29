@@ -50,7 +50,7 @@ Android | IOS | Desktop
 
 This library is available through [qpm](https://www.qpm.io):
 
-    npm install -g com.paulon.quicknative
+    qpm install com.paulon.quicknative
 
 
 ### Licensing
