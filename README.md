@@ -15,7 +15,7 @@ NativeTextInput | *coming soon* | *coming soon* | Provided By Qt |
 
 #### Image Picker
 * This component has been tested accross different android versions and devices
-* Follows the same as [FileDialog](http://doc.qt.io/qt-5/qml-qtquick-dialogs-filedialog.html):
+* Follows the same api as [FileDialog](http://doc.qt.io/qt-5/qml-qtquick-dialogs-filedialog.html):
 
 ```javascript
 
