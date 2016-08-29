@@ -30,7 +30,7 @@ void NativeFileDialogAndroid::open(QUrl initialFolder=QUrl()) {
 
         // pictures & videos
         // Using MoviesLocation to also let the user to pick images, the reason for this is
-        // the fact that the current shortcuts available in Qt are desktop centric
+        // the fact that the current available shortcuts in Qt are too desktop centric
         else if (initialFolder == QUrl::fromLocalFile(QStandardPaths::writableLocation(QStandardPaths::MoviesLocation))) {
             contentType = "image/*,video/*";
         }
@@ -116,7 +116,6 @@ QString NativeFileDialogAndroid::filePath(QAndroidJniObject & uri) {
 
     // otherwise query the file path through content resolver
     else {
-
 
         QAndroidJniEnvironment env;
 
