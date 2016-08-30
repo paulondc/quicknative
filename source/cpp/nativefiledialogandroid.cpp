@@ -115,7 +115,6 @@ QString NativeFileDialogAndroid::filePath(QAndroidJniObject & uri) {
     // otherwise query the file path through content resolver
     else {
 
-
         QAndroidJniEnvironment env;
 
         QAndroidJniObject mediaStore = QAndroidJniObject::getStaticObjectField("android/provider/MediaStore$MediaColumns", "DATA", "Ljava/lang/String;");
