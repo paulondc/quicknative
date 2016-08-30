@@ -80,7 +80,7 @@ QVariantMap NativeFileDialogExt::shortcuts() {
 
 void NativeFileDialogExt::setFileUrl(QString url) {
 
-    if (url.isEmpty()){
+    if (url.isEmpty()) {
         setFileUrls(QStringList());
     }
     else{
