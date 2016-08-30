@@ -50,7 +50,6 @@ void NativeFileDialogExt::open() {
     }
     catch (const char* exceptionMessage) {
         qDebug() << exceptionMessage;
-        disconnect(picker, SIGNAL(selectedFilePaths(QStringList)), this, SLOT(setFileUrls(QStringList)));
     }
 }
 
