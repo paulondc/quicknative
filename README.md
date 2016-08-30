@@ -2,7 +2,7 @@
 
 The goal of quick native is to provide native user experience in components that require a fine integration in both Android and IOS. Also, this library is inspired by how [RectNative](http://www.reactnative.com) extensions work which briefly means to provide an abstracted interface that's platform independent.
 
-One of the main reasons to use QML/Qt is the fact that apps don't need to run in their target platform all the time (through emulators or physical devices), instead they can be executed locally which makes the process of writing mobile apps very convenient, therefore components in this library fallback to Qt's standard ones when the running platform does not have an equivalent native one.
+One of the main reasons to use QML/Qt is the fact that apps don't need to run in their target platform all the time (through emulators or physical devices), instead they can be executed locally which makes the process of writing mobile apps very convenient, therefore components in this library fallback to Qt's standard ones when the running platform does not have the equivalent native one.
 
 ### Native Components
 Component | Native Android | Native IOS | Desktop |
