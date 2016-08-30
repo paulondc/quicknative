@@ -13,10 +13,8 @@ void NativeFileDialogAndroid::open(QUrl initialFolder=QUrl()) {
         QAndroidJniObject intent("android/content/Intent");
         QString contentType;
 
-        // querying the buildVersion to make sure the multiple selection feature is available
-        int buildVersion = QAndroidJniObject::getStaticField<jint>("android/os/Build$VERSION", "SDK_INT");
-
-        if (m_selectMultiple && buildVersion >= 19) {
+        // querying the android version to make sure the multiple selection feature is available
+        if (m_selectMultiple && QtAndroid::androidSdkVersion() >= 19) {
             intent.callObjectMethod("putExtra","(Ljava/lang/String;Z)Landroid/content/Intent;",
                 QAndroidJniObject::getStaticObjectField("android/content/Intent", "EXTRA_ALLOW_MULTIPLE", "Ljava/lang/String;").object<jobject>(), true);
         }
@@ -117,13 +115,14 @@ QString NativeFileDialogAndroid::filePath(QAndroidJniObject & uri) {
     // otherwise query the file path through content resolver
     else {
 
+
         QAndroidJniEnvironment env;
 
         QAndroidJniObject mediaStore = QAndroidJniObject::getStaticObjectField("android/provider/MediaStore$MediaColumns", "DATA", "Ljava/lang/String;");
 
         jobjectArray projection = (jobjectArray)env->NewObjectArray(1, env->FindClass("java/lang/String"), env->NewStringUTF(""));
 
-        env->SetObjectArrayElement(projection, 0, env->NewStringUTF(mediaStore.toString().toStdString().c_str()));
+        env->SetObjectArrayElement(projection, 0, mediaStore.object<jstring>());
 
         QAndroidJniObject contentResolver = QtAndroid::androidActivity().callObjectMethod("getContentResolver", "()Landroid/content/ContentResolver;");
 

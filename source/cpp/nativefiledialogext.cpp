@@ -120,13 +120,9 @@ NativeFileDialogExt* NativeFileDialogExt::qmlAttachedProperties(QObject * object
     return new NativeFileDialogExt();
 }
 
-struct NativeFileDialogExtTypeRegisterHelper {
+static void registerNativeFileDialogExt() {
+    // overriding the qml version when this component is avaiable
+    qmlRegisterType<NativeFileDialogExt>("QuickNative", 0, 1, "NativeFileDialog");
+}
 
-    NativeFileDialogExtTypeRegisterHelper() {
-
-        // overriding the qml version when this component is avaiable
-        qmlRegisterType<NativeFileDialogExt>("QuickNative", 0, 1, "NativeFileDialog");
-    }
-};
-
-static const NativeFileDialogExtTypeRegisterHelper typeRegisterHelper;
+Q_COREAPP_STARTUP_FUNCTION(registerNativeFileDialogExt)
