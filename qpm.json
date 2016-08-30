@@ -10,7 +10,7 @@
     "url": "https://github.com/paulondc/quicknative.git"
   },
   "version": {
-    "label": "0.1.0"
+    "label": "0.2.0"
   },
   "pri_filename": "quicknative.pri",
   "license": "MIT"
