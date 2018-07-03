@@ -40,7 +40,7 @@ NativeFileDialog {
 
 ```
 
-#### Result:
+#### Result
 
 Android | IOS | Desktop
 --- | --- | --- |
